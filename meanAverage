@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main (String[] args){
+
+        Scanner reader = new Scanner(System.in);
+        float grades, sum = 0;
+        int i = 0;
+
+        System.out.print(
+                "Program calculates the average of inputted grades.\n" +
+                        "Finish with a negative integer.\n\n"
+        );
+
+        do {
+            System.out.print("Input a grade (4-10): ");
+            grades = reader.nextFloat();
+
+            if (grades >= 4 && grades <= 10){
+                sum = sum + grades;
+                i++;
+
+            } else if (grades >= 0 && (grades <= 4 || grades >= 10)){
+                System.out.println("Invalid grade!");
+
+            } else {
+                break;
+            }
+
+        } while (grades >= 0);
+
+        if (sum == 0){
+            System.out.println("You did not input any grades.");
+
+        } else {
+
+            double doubleSum = sum;
+            System.out.println ("\n"+ i + " grades inputted.");
+            System.out.println ("Average of the grades: " + (doubleSum/i));
+        }
+    }
+}
+
+/*
+EXERCISE:
+Create a program that asks for results of exams and calculates the mean average of the grades. Grades are floating point numbers between 4 and 10.
+Program asks for grades until a negative number is typed. If user gives a grade other than a number between 4 and 10, the text “Invalid grade!” will be
+printed on screen and program asks for another grade. Finally the program prints the number of inputted grades and their mean average on screen as shown
+in the example print. If no grades were inputted, the notice “You did not input any grades.” is the only thing printed on screen.
+
+Hint:A double type variable is to be used to store the value of the average.
+*/
+
+
