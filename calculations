@@ -50,7 +50,8 @@ public class Main {
 }
 
 /*
-EXERCISE:
+EXERCISE
+
 Create a calculator program which lets the user choose what calculation to perform.
 First the program asks what calculation is to be performed.
 Then the program asks for two integers, performs the chosen calculation between the given numbers and prints the result on screen.
